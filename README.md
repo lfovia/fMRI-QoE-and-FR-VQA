@@ -8,11 +8,14 @@ If you find this work useful in your research, please cite the following paper
 N. S. Mahankali and S. S. Channappayya, "Video Quality Prediction Using Voxel-Wise fMRI Models of the Visual Cortex," ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021, pp. 2125-2129, doi: 10.1109/ICASSP39728.2021.9414328.
 
 Prerequisites
+
     Python 
     Matlab
     
 The fMRI data-set can be downloaded from  https://crcns.org/data-sets/vc/vim-2
 
 Data preprocessing
-
+ 
+ Split the training and test videos into segments and then extract the frames of these segments using video_preprocessing.m
+ The ground truth fMRI data can be processed using 
     
