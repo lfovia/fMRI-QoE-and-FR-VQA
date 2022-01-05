@@ -10,18 +10,18 @@ N. S. Mahankali and S. S. Channappayya, "Video Quality Prediction Using Voxel-Wi
    
 The fMRI data-set can be downloaded from  https://crcns.org/data-sets/vc/vim-2
 
-Data processing steps:
+# Data processing steps:
  
- Split the training and test videos into segments and then extract the frames of these segments using "video_preprocessing.m"
+ 1. Split the training and test videos into segments and then extract the frames of these segments using "video_preprocessing.m"
  
- The ground truth fMRI data can be processed using  "fmri_data_processing.m"
+ 2. The ground truth fMRI data can be processed using  "fmri_data_processing.m"
  
- Features are extracted using "AlexNet_feature_extraction.py"
+ 3. Features are extracted using "AlexNet_feature_extraction.py"
  
- These features are processed for dimensionality reduction using "AlexNet_feature_processing_encoding.m"
+ 4. These features are processed for dimensionality reduction using "AlexNet_feature_processing_encoding.m". The svd matrices computed over the vim-2 dataset are used for the dimensionality reduction of the features of all the other datasets. The precomputed svd matrices can be downloaded from [here](https://drive.google.com/drive/folders/1ze305Xzd-0Db-H6-_N6n_V3QdXor9i9v?usp=sharing). 
  
- Using these dimensionality reduced features encode the voxel for all the three subjects using "encode.m"
+ 5. Using these dimensionality reduced features, encode the voxel models for all the three subjects using "encode.m". Our pretrained voxel models on Vim-2 dataset can be downloaded from our [drive](https://drive.google.com/drive/folders/10oloKHJSG9qHazv1Gr78S4kzmG_V-4vh?usp=sharing).
  
- You can predict the voxel responses of new videos using "predict_response.m"
+ 6. The voxel responses of new videos can be predicted using "predict_response.m"
     
- The quality scores can be computed using "fmri_QoE.m" and "fMRI_VQA.m"
+ 7. The quality scores can be computed using "fmri_QoE.m" and "fMRI_VQA.m"
